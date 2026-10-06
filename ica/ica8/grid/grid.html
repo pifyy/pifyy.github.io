@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test Your Skills: Grid</title>
+    <style>
+      body {
+        font: 1.2em / 1.5 sans-serif;
+      }
+
+      section {
+        margin-bottom: 3em;
+      }
+
+      #task1 .grid > * {
+        background-color: #4d7298;
+        border: 2px solid #77a6b6;
+        border-radius: 0.5em;
+        color: white;
+        padding: 0.5em;
+      }
+
+      #task1 .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      #task2 .grid > * {
+        border-radius: 0.5em;
+        color: white;
+        padding: 0.5em;
+      }
+
+      #task2 .item1 {
+        background-color: rgb(74 102 112 / 70%);
+        border: 5px solid rgb(74 102 112 / 100%);
+      }
+
+      #task2 .item2 {
+        background-color: rgb(214 162 173 / 70%);
+        border: 5px solid rgb(214 162 173 / 100%);
+      }
+
+      #task2 .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        gap: 10px;
+      }
+
+      #task2 .item1 {
+        grid-column: 1 / 4;
+        grid-row: 1 / 3;
+      }
+
+      #task2 .item2 {
+      }
+
+      #task3 .grid > * {
+        background-color: #4d7298;
+        border: 2px solid #77a6b6;
+        border-radius: 0.5em;
+        color: white;
+        padding: 0.5em;
+      }
+
+      #task3 .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+      }
+
+      #task3 .one {
+        grid-area: one;
+      }
+
+      #task3 .two {
+        grid-area: two;
+      }
+
+      #task3 .three {
+        grid-area: three;
+      }
+
+      #task3 .four {
+        grid-area: four;
+      }
+
+      #task4 .card {
+        display: grid;
+        grid-template-rows: 200px min-content;
+      }
+
+      #task4 .card > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #task4 .tags {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      #task4 .tags > * {
+        background-color: #999999;
+        color: white;
+        padding: 0.2em 0.8em;
+        border-radius: 0.2em;
+        font-size: 80%;
+        margin: 5px;
+      }
+
+      #task4 .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      #task4 .tags {
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Test Your Skills: Grid</h1>
+
+    <section id="task1">
+      <h2>Task 1</h2>
+      <p>Make a grid with three columns that share the space equally, with a 20px gap between rows and columns.</p>
+      <div class="grid">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+      </div>
+    </section>
+
+    <section id="task2">
+      <h2>Task 2</h2>
+      <p>Make each item span several grid tracks so the second item overlaps the first. Bonus: make the first item show on top without changing the HTML.</p>
+      <div class="grid">
+        <div class="item1">One</div>
+        <div class="item2">Two</div>
+      </div>
+    </section>
+
+    <section id="task3">
+      <h2>Task 3</h2>
+      <p>Use grid-area and grid-template-areas to lay out the four items like the picture on the MDN page.</p>
+      <div class="grid">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+      </div>
+    </section>
+
+    <section id="task4">
+      <h2>Task 4</h2>
+      <p>Use grid for the cards and flexbox for the tags. The gap between rows and columns should be 10px.</p>
+      <div class="container">
+        <div class="card">
+          <img
+            alt="a single red balloon"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg"
+          />
+          <ul class="tags">
+            <li>balloon</li>
+            <li>red</li>
+            <li>sky</li>
+            <li>blue</li>
+            <li>Hot air balloon</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img
+            alt="balloons over some houses"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg"
+          />
+          <ul class="tags">
+            <li>balloons</li>
+            <li>houses</li>
+            <li>train</li>
+            <li>harborside</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img
+            alt="close-up of balloons inflating"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg"
+          />
+          <ul class="tags">
+            <li>balloons</li>
+            <li>inflating</li>
+            <li>green</li>
+            <li>blue</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img
+            alt="a balloon in the sun"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg"
+          />
+          <ul class="tags">
+            <li>balloon</li>
+            <li>sun</li>
+            <li>sky</li>
+            <li>summer</li>
+            <li>bright</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
