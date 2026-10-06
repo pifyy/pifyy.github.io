@@ -24,6 +24,7 @@
       #task1 .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
       }
 
       #task2 .grid > * {
@@ -52,9 +53,12 @@
       #task2 .item1 {
         grid-column: 1 / 4;
         grid-row: 1 / 3;
+        z-index: 1;
       }
 
       #task2 .item2 {
+        grid-column: 2 / 5;
+        grid-row: 2 / 4;
       }
 
       #task3 .grid > * {
@@ -70,23 +74,6 @@
         grid-template-columns: 1fr 2fr;
         gap: 10px;
       }
-
-      #task3 .one {
-        grid-area: one;
-      }
-
-      #task3 .two {
-        grid-area: two;
-      }
-
-      #task3 .three {
-        grid-area: three;
-      }
-
-      #task3 .four {
-        grid-area: four;
-      }
-
       #task4 .card {
         display: grid;
         grid-template-rows: 200px min-content;
@@ -114,9 +101,6 @@
       }
 
       #task4 .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
       }
 
       #task4 .tags {
