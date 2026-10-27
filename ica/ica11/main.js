@@ -7,10 +7,10 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = "It was 94 fahrenheit outside, so :insertx: went to get pizza. When they got to :inserty:, they saw a giant dog and then :insertz:. Bob saw everything and laughed, because :insertx: is clearly beyond drunk and a pool noodle fell on his head.";
-const insertX = ["Captain Noodle", "Grandma Joe", "Big Steve"];
-const insertY = ["the mall", "the beach", "the gas station"];
-const insertZ = ["ran away screaming", "fell into the pool", "started dancing on the table"];
+const storyText = "It was 34 fahrenheit in January when me and my buddies went to Dublin for vacation. We went to :inserty: and :insertx: got way too drunk. On the walk back :insertx: fell into the river and :insertz:. Bob and the rest of us ran along the river trying to catch him, but instead we found a leprechaun who told us to go back to the bars. Nobody could pull :insertx: out anyway because he weighs 300 pounds.";
+const insertX = ["Big Mike", "Tommy", "Sully"];
+const insertY = ["Temple Bar", "a tiny pub on Grafton Street", "an old pub by the docks"];
+const insertZ = ["floated away singing", "started yelling for his mom", "tried to swim with the ducks"];
 
 randomize.addEventListener('click', result);
 
@@ -32,8 +32,8 @@ function result() {
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300 / 14) + " stone";
-    const temperature =  Math.round((94 - 32) * 5 / 9) + " centigrade";
-    newStory = newStory.replaceAll("94 fahrenheit", temperature);
+    const temperature =  Math.round((34 - 32) * 5 / 9) + " centigrade";
+    newStory = newStory.replaceAll("34 fahrenheit", temperature);
     newStory = newStory.replaceAll("300 pounds", weight);
   }
 
