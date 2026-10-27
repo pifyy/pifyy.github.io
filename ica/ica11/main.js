@@ -7,7 +7,7 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = "It was 94 fahrenheit outside, so :insertx: went to get pizza. When they got to :inserty:, they saw a giant dog and then :insertz:. Bob saw everything and laughed, because :insertx: weighs 300 pounds and it was a really hot day.";
+const storyText = "It was 94 fahrenheit outside, so :insertx: went to get pizza. When they got to :inserty:, they saw a giant dog and then :insertz:. Bob saw everything and laughed, because :insertx: is clearly beyond drunk and a pool noodle fell on his head.";
 const insertX = ["Captain Noodle", "Grandma Joe", "Big Steve"];
 const insertY = ["the mall", "the beach", "the gas station"];
 const insertZ = ["ran away screaming", "fell into the pool", "started dancing on the table"];
