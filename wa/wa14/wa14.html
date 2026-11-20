@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pifyy Design System</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        :root {
+            /* Color Palette - 5 Core Colors */
+            --color-primary: #C8102E;     /* Bright Red - Main Brand Color */
+            --color-secondary: #2ECC40;   /* Go Green - Complementary Action Color */
+            --color-accent: #F2B705;      /* Gold - Highlight / Warning Color */
+            --color-neutral: #1C1C1C;     /* Charcoal - Neutral Text and Background */
+            --color-highlight: #F5F2EE;   /* Off-White - Accent / Attention Color */
+            
+            /* Derived Colors for Flexibility */
+            --color-background: color-mix(in srgb, var(--color-neutral) 10%, white);
+            --color-text-dark: var(--color-neutral);
+            --color-text-light: white;
+
+            /* Typography */
+            --font-primary: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-secondary: 'Roboto Mono', monospace;
+
+            /* Spacing System */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            padding: var(--spacing-xl);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography Styles */
+        h1 {
+            font-size: 2.441rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+        }
+
+        h2 {
+            font-size: 1.953rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-neutral);
+        }
+
+        h3 {
+            font-size: 1.563rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-neutral);
+        }
+
+        .body-text {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .small-text {
+            font-size: 0.8rem;
+            color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);
+        }
+
+        /* Color Palette Section */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .color-swatch {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Component Styles */
+        .button {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: background-color 0.3s ease, transform 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .button:hover {
+            background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        .button:focus-visible, .link:focus-visible, .input:focus-visible {
+            outline: 3px solid var(--color-neutral);
+            outline-offset: 2px;
+        }
+
+        .button:active {
+            transform: scale(0.95);
+            background-color: var(--color-secondary);
+            color: var(--color-text-dark);
+        }
+
+        .link {
+            color: var(--color-primary);
+            text-decoration: underline;
+            transition: color 0.3s ease, text-decoration-color 0.3s;
+        }
+
+        .link:visited {
+            color: var(--color-neutral);
+        }
+
+        .link:hover {
+            color: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        .input {
+            padding: var(--spacing-xs);
+            border: 2px solid var(--color-neutral);
+            border-radius: var(--radius-sm);
+        }
+
+        /* Spacing Demonstration */
+        .spacing-demo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .spacing-block {
+            background-color: var(--color-primary);
+            height: 50px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Pifyy Design System</h1>
+
+        <section>
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: var(--color-primary); color: var(--color-text-light);">
+                    <strong>Primary Color</strong>
+                    <p>#C8102E</p>
+                    <small>Contrast Ratio: 5.88:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-secondary); color: var(--color-text-dark);">
+                    <strong>Secondary Color</strong>
+                    <p>#2ECC40</p>
+                    <small>Contrast Ratio: 7.98:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-accent); color: var(--color-text-dark);">
+                    <strong>Accent Color</strong>
+                    <p>#F2B705</p>
+                    <small>Contrast Ratio: 9.37:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-neutral); color: var(--color-text-light);">
+                    <strong>Neutral Color</strong>
+                    <p>#1C1C1C</p>
+                    <small>Contrast Ratio: 17.04:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-highlight); color: var(--color-text-dark);">
+                    <strong>Highlight Color</strong>
+                    <p>#F5F2EE</p>
+                    <small>Contrast Ratio: 15.27:1</small>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <h1>Heading 1 - Archivo</h1>
+            <h2>Heading 2 - Archivo</h2>
+            <h3>Heading 3 - Archivo</h3>
+            <p class="body-text">Body Text - Using Archivo with a comfortable line height and readable size.</p>
+            <p class="small-text">Small Text - Subtle and understated, perfect for annotations and footnotes.</p>
+        </section>
+
+        <section>
+            <h2>Spacing System</h2>
+            <div class="spacing-demo">
+                <div class="spacing-block" style="width: var(--spacing-xs)"></div>
+                <div class="spacing-block" style="width: var(--spacing-sm)"></div>
+                <div class="spacing-block" style="width: var(--spacing-md)"></div>
+                <div class="spacing-block" style="width: var(--spacing-lg)"></div>
+                <div class="spacing-block" style="width: var(--spacing-xl)"></div>
+            </div>
+            <p>Spacing blocks demonstrating size variations from xs to xl</p>
+        </section>
+
+        <section>
+            <h2>Interactive Components</h2>
+            <a href="#" class="button">Primary Button</a>
+            <a href="#" class="link">Standard Link</a>
+            <a href="wa14.html" class="link">Visited Link</a>
+            <label for="name">Name</label>
+            <input type="text" id="name" class="input">
+        </section>
+    </div>
+</body>
+</html>
